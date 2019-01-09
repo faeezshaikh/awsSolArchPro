@@ -1,8 +1,8 @@
 {
   "name": "awsSolArchPro",
-  "app_id": "94e33ee8",
-  "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular",
+  "pro_id": "94e33ee8"
 }

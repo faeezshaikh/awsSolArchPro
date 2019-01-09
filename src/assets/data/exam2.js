@@ -681,6 +681,17 @@
                 { "Id": 1057, "QuestionId": 1010, "Name": "The mobile application will submit its location to a web service endpoint utilizing Elastic Load Balancing and EC2 instances. DynamoDB will be used to store and retrieve relevant offers. EC2 instances will communicate with mobile carriers/device providers to push alerts back to mobile application.", "IsAnswer": false },
                 { "Id": 1058, "QuestionId": 1010, "Name": "The mobile application will send device location using AWS Mobile Push, EC2 instances will retrieve the relevant offers from DynamoDB. EC2 instances will communicate with mobile carriers/device providers to push alerts back to the mobile application.", "IsAnswer": false }],
         "Explanation":"AWS using SQS to store the message from mobile apps,and using AWS Mobile Push to send offers to mobile apps."
+    },
+    {
+        "Id": 67,
+        "Name": "You are running a news website in the eu-west-1 region that updates every 15 minutes. The website has a world-wide audience. It uses an Auto Scaling group behind an Elastic Load Balancer and an Amazon RDS database. Static content resides on Amazon S3, and is distributed through Amazon CloudFront. Your Auto Scaling group is set to trigger a scale up event at 60% CPU utilization. You use an Amazon RDS extra large DB instance with 10,000 Provisioned IOPS, its CPU utilization is around 80%, while freeable memory is in the 2 GB range. web analytics reports show that the average load time of your web pages is around 1.5 to 2 seconds, but your SEO consultant wants to bring down the average load time to under 0.5 seconds. How would you Improve page load times for your users? Choose 3 answers", 
+        "Options": [
+                { "Id": 1055, "QuestionId": 1010, "Name": "Configure Amazon CloudFront dynamic content support to enable caching of re-usable content from your site.", "IsAnswer": true },
+                { "Id": 1056, "QuestionId": 1010, "Name": "Set up a second installation in another region, and use the Amazon Route 53 latency-based routing feature to select the right region.", "IsAnswer": true },
+                { "Id": 1057, "QuestionId": 1010, "Name": "Lower the scale up trigger of your Auto Scaling group to 30% so it scales more aggressively.", "IsAnswer": false },
+                { "Id": 1058, "QuestionId": 1010, "Name": "Add an Amazon ElastiCache caching layer to your application for storing sessions and frequent DB queries.", "IsAnswer": true },
+                { "Id": 1059, "QuestionId": 1010, "Name": "Switch the Amazon RDS database to the high memory extra large instance type.", "IsAnswer": false }],
+        "Explanation":"To speed up load times leverage caching. Also configuring Amazon CloudFront dynamic content will help with caching. Reducing the scaling threshold to 30% will help with aggressivley scaling but wont help with improving page load times. Also the RDS instance is pretty large and optimally utilized so changing the RDS instance wont help much. Instead a second installation in another region will help since the audience for the website is global."
     }
     ]
 }

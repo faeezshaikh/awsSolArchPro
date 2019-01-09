@@ -1,14 +1,14 @@
 # awsSolArchPro
 
 
-sudo cordova build android --prod --release
+sudo ionic cordova build --release android
 rm *.apk
-cp /Users/faeezshaikh/git/awsSolArchPro/platforms/android/build/outputs/apk/android-release-unsigned.apk .
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore awsArch-key.keystore android-release-unsigned.apk awsArch-
+cp /Users/faeezshaikh/git/awsSolArchPro/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk .
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore awsArch-key.keystore app-release-unsigned.apk awsArch-
 /Users/faeezshaikh/Library/Android/sdk/build-tools/23.0.2/zipalign -v 4 android-release-unsigned.apk AWS-Certified-Pro-Arch.apk
 
 OR
-/Users/faeezshaikh/Library/Android/sdk/build-tools/27.0.0/zipalign -v 4 android-release-unsigned.apk AWS-Certified-Pro-Arch.apk
+/Users/faeezshaikh/Library/Android/sdk/build-tools/27.0.0/zipalign -v 4 app-release-unsigned.apk AWS-Certified-Pro-Arch.apk
 
 
 For iOS Release:
@@ -59,7 +59,7 @@ Chat with other users
 Comment on a question
 
 
-Till ! # 79 (Q #69 in Exam1) from pdf / March 13
+Till ! # 81 (Q #67 in Exam2) from pdf / Jan 9, 2019
 
 
 FB Mobile App Ads:
